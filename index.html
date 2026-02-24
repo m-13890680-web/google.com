@@ -4,26 +4,92 @@
     <title>Google</title>
     <link rel="icon" type="image/png" href="https://www.google.com/favicon.ico">
     <style>
-        /* The Google look */
-        body { font-family: arial, sans-serif; text-align: center; margin-top: 150px; background: white; overflow: hidden; }
-        .logo { font-size: 90px; font-weight: bold; margin-bottom: 20px; cursor: default; user-select: none; }
-        .g { color: #4285F4; } .o1 { color: #EA4335; } .o2 { color: #FBBC05; }
-        .g2 { color: #4285F4; } .l { color: #34A853; } .e { color: #EA4335; }
-        input { width: 500px; padding: 12px; border-radius: 24px; border: 1px solid #dfe1e5; outline: none; font-size: 16px; }
-        .buttons { margin-top: 25px; }
-        button { padding: 10px 20px; margin: 5px; border: 1px solid #f8f9fa; background: #f8f9fa; cursor: pointer; border-radius: 4px; color: #3c4043; }
-        button:hover { border: 1px solid #dadce0; color: #202124; }
+       body { 
+    font-family: 'arial', sans-serif; 
+    text-align: center; 
+    margin: 0; 
+    padding-top: 160px; 
+    background: #fff; 
+}
 
-        /* The Hidden Trap */
-        #troll-container {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            background: black;
-            z-index: 9999;
-        }
-        iframe { width: 100%; height: 100%; border: none; }
+/* The Logo: Using Google's exact color hex codes */
+.logo { 
+    font-size: 92px; 
+    font-weight: 500; 
+    margin-bottom: 25px; 
+    letter-spacing: -3px;
+    font-family: 'Product Sans', 'Arial', sans-serif;
+    user-select: none;
+}
+.g { color: #4285F4; } 
+.o1 { color: #EA4335; } 
+.o2 { color: #FBBC05; }
+.g2 { color: #4285F4; } 
+.l { color: #34A853; } 
+.e { color: #EA4335; }
+
+/* The Search Bar: Adding the subtle border and shadow */
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+input { 
+    width: 584px; 
+    height: 44px;
+    padding: 0 20px; 
+    border-radius: 24px; 
+    border: 1px solid #dfe1e5; 
+    outline: none; 
+    font-size: 16px;
+    transition: box-shadow 0.2s;
+}
+
+input:hover, input:focus {
+    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+/* The Buttons: Matching the grey and the hover state */
+.buttons { 
+    margin-top: 28px; 
+}
+
+button { 
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 34px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #202124;
+}
+
+/* Hide the prank video initially */
+#troll-container {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    z-index: 10000;
+}
+video { width: 100%; height: 100%; }
     </style>
 </head>
 <body>
@@ -64,3 +130,4 @@
 
 </body>
 </html>
+
